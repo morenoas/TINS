@@ -14,9 +14,6 @@ try:
     server.sendmail('author@example.com', ['recipient@example.com'], msg.as_string())
 finally:
     server.quit()
-
-
-    # aaaaa
     
 
 
