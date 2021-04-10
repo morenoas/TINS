@@ -3,7 +3,7 @@ import asyncore
 
 class CustomSMTPServer(smtpd.SMTPServer):
     
-    def process_message(self, peer, mailfrom, rcpttos, data):
+    def process_message(self, peer, mailfrom, rcpttos, data, **kwargs):
         # print message details
         print ('Receiving message from:', peer)
         print ('Message addressed from:', mailfrom)
