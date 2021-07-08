@@ -24,6 +24,7 @@ spam_count = int(5)
 
 class CustomSMTPServer(smtpd.SMTPServer):
     
+<<<<<<< HEAD
 
     # looking for a virus in data
     # TODO: figure out which fields in each virus and change size accordingly 
@@ -77,6 +78,10 @@ class CustomSMTPServer(smtpd.SMTPServer):
             print('NOTICE: this mail contain EXEC file , could be a virus')
         if c in black_list:
             print('NOTICE: this mail may contain virus/spam')
+=======
+    def process_message(self, peer, mailfrom, rcpttos, data, **kwargs):
+        # print message details
+>>>>>>> 95c5d7024729a7c410f27b36871ec2e7a478563a
         print ('Receiving message from:', peer)
         print ('Message addressed from:', mailfrom)
         print ('Message addressed to  :', rcpttos)
